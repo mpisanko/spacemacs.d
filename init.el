@@ -131,15 +131,15 @@ This function should only modify configuration layer settings."
           ;; popup documentation boxes
           ;; lsp-ui-doc-enable nil          ;; disable all doc popups
           lsp-ui-doc-show-with-cursor nil   ;; doc popup for cursor
-          ;; lsp-ui-doc-show-with-mouse t   ;; doc popup for mouse
+          lsp-ui-doc-show-with-mouse t   ;; doc popup for mouse
           ;; lsp-ui-doc-delay 2                ;; delay in seconds for popup to display
           lsp-ui-doc-include-signature t    ;; include function signature
           ;; lsp-ui-doc-position 'at-point  ;; top bottom at-point
           lsp-ui-doc-alignment 'window      ;; frame window
 
           ;; code actions and diagnostics text as right-hand side of buffer
-          lsp-ui-sideline-enable nil
-          lsp-ui-sideline-show-code-actions nil
+          lsp-ui-sideline-enable t
+          lsp-ui-sideline-show-code-actions t
           ;; lsp-ui-sideline-delay 500
 
           ;; lsp-ui-sideline-show-diagnostics nil
@@ -413,13 +413,13 @@ It should only modify the values of Spacemacs settings."
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
 
-   dotspacemacs-themes '(doom-gruvbox-light
+   dotspacemacs-themes '(spacemacs-dark
+			 doom-gruvbox-light
                          doom-solarized-light
                          doom-sourcerer
                          kaolin-valley-dark
                          doom-solarized-dark
-                         spacemacs-light
-                         spacemacs-dark)
+                         spacemacs-light)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
    ;; `all-the-icons', `custom', `doom', `vim-powerline' and `vanilla'. The
@@ -428,7 +428,7 @@ It should only modify the values of Spacemacs settings."
    ;; refer to the DOCUMENTATION.org for more info on how to create your own
    ;; spaceline theme. Value can be a symbol or list with additional properties.
    ;; (default '(spacemacs :separator wave :separator-scale 1.5))
-   dotspacemacs-mode-line-theme '(doom)
+   dotspacemacs-mode-line-theme '(spacemacs)  ; '(doom)
 
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    ;; (default t)
@@ -437,8 +437,8 @@ It should only modify the values of Spacemacs settings."
    ;; Default font or prioritized list of fonts. The `:size' can be specified as
    ;; a non-negative integer (pixel size), or a floating-point (point size).
    ;; Point size is recommended, because it's device independent. (default 10.0)
-   dotspacemacs-default-font '("Fira Code"
-                               :size 12.0
+   dotspacemacs-default-font '("Source Code Pro"
+                               :size 20.0
                                :weight normal
                                :width normal)
 
